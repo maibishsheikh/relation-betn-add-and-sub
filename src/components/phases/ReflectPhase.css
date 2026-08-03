@@ -1,0 +1,50 @@
+.reflect-wrap {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 12px; overflow-y: auto; z-index: 1; width: 100%;
+}
+.reflect-card {
+  max-width: 640px; width: 100%;
+  padding: clamp(16px, 2.5vw, 30px);
+  display: flex; flex-direction: column; gap: 16px; align-items: center;
+}
+.reflect-badge {
+  background: rgba(255,193,7,0.12); border: 1px solid rgba(255,193,7,0.35);
+  color: var(--gold); font-family: var(--font-display); font-size: 0.85rem; font-weight: 800;
+  padding: 4px 14px; border-radius: var(--radius-full);
+}
+.reflect-title { color: var(--gold); text-align: center; margin: 0; }
+.reflect-subtitle { color: var(--text-secondary); text-align: center; margin: 0; font-size: 0.95rem; }
+
+.reflect-stats { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; width: 100%; }
+.reflect-stat-item {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md); padding: 10px 18px; min-width: 90px;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.reflect-stat-value { font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: var(--gold); }
+.reflect-stat-label { font-size: 0.72rem; color: var(--text-muted); font-weight: 700; }
+
+.reflect-question { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.reflect-question-title {
+  font-family: var(--font-display); font-size: clamp(0.95rem, 1.1vw + 0.2rem, 1.1rem);
+  font-weight: 700; color: #fff; margin: 0;
+}
+.reflect-options { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.reflect-option {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-md); padding: 10px 14px;
+  color: var(--text-primary); font-family: var(--font-body); font-size: 0.92rem; font-weight: 600;
+  cursor: pointer; transition: var(--transition);
+}
+.reflect-option:hover { border-color: rgba(255,193,7,0.4); background: rgba(255,193,7,0.08); }
+.reflect-option.selected { border-color: var(--gold); background: rgba(255,193,7,0.15); color: var(--gold-light); }
+.reflect-radio {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3); flex-shrink: 0;
+  transition: var(--transition);
+}
+.reflect-option.selected .reflect-radio { border-color: var(--gold); background: var(--gold); }
+
+.reflect-complete-btn { margin-top: 8px; width: 100%; max-width: 640px; }
+.reflect-hint { color: var(--text-muted); font-size: 0.8rem; margin: 0; }

@@ -1,0 +1,56 @@
+.play-wrap {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  padding: 10px; overflow-y: auto; z-index: 1; width: 100%; max-width: 720px; margin: 0 auto;
+}
+
+.play-topic-badge {
+  display: flex; gap: 10px; align-items: center; justify-content: space-between;
+  width: 100%; max-width: 680px; margin-bottom: 8px;
+  background: rgba(30, 30, 80, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 6px 14px;
+}
+.play-topic-title {
+  font-family: var(--font-display); font-size: 0.88rem; font-weight: 700; color: var(--gold);
+  display: flex; align-items: center; gap: 6px;
+}
+
+.play-hud-row {
+  display: flex; gap: 10px; align-items: center; justify-content: center;
+  width: 100%; max-width: 680px; margin-bottom: 8px;
+}
+.hud-pill {
+  background: rgba(20, 20, 35, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  padding: 5px 14px;
+  display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-display); font-size: 0.88rem; font-weight: 700; color: #fff;
+  backdrop-filter: blur(10px);
+}
+.hud-pill-icon { font-size: 1rem; }
+
+.play-done-wrap {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 16px; width: 100%;
+}
+.play-done-card {
+  max-width: 480px; width: 100%;
+  padding: 36px 28px;
+  display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center;
+}
+.play-done-icon { font-size: 3.5rem; }
+.play-done-title { color: var(--gold); margin: 0; }
+.play-done-stats {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 6px 0;
+}
+.stat-pill {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-display); font-size: 0.88rem; font-weight: 700; color: #fff;
+}
+.play-done-cta { margin-top: 8px; width: 100%; }

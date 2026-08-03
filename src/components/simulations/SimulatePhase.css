@@ -1,0 +1,52 @@
+.sim-wrap {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 10px; overflow: hidden; z-index: 1;
+}
+.sim-card {
+  max-width: 860px; width: 100%;
+  padding: clamp(12px, 1.8vw, 24px);
+  display: flex; flex-direction: column; gap: 10px;
+  max-height: calc(100dvh - 80px); overflow: hidden;
+}
+.sim-tabs {
+  display: flex; gap: 6px; flex-wrap: wrap;
+}
+.sim-tab {
+  flex: 1; min-width: 120px;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: clamp(0.7rem, 0.85vw + 0.2rem, 0.9rem);
+  font-weight: 700;
+  padding: 8px 10px;
+  display: flex; align-items: center; gap: 6px;
+  transition: var(--transition);
+  cursor: pointer;
+  min-height: 44px;
+}
+.sim-tab:hover { border-color: rgba(255,193,7,0.4); color: var(--text-primary); }
+.sim-tab.active { background: rgba(255,193,7,0.15); border-color: var(--gold); color: var(--gold); }
+.sim-tab.done   { border-color: var(--green); color: var(--green-light); }
+.tab-icon { font-size: 1.1rem; }
+.tab-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.sim-station-area { flex: 1; overflow: auto; min-height: 0; }
+
+.sim-footer {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.07);
+}
+.sim-progress-dots { display: flex; gap: 8px; }
+.sim-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: rgba(255,255,255,0.2); transition: var(--transition);
+}
+.sim-dot.active { background: var(--gold); transform: scale(1.4); }
+.sim-dot.done   { background: var(--green); }
+
+@media (max-width: 500px) {
+  .tab-name { display: none; }
+  .sim-tab  { min-width: 44px; justify-content: center; }
+}
